@@ -1,6 +1,5 @@
 ---
 title: $\LaTeX$
-date: <span style="text-transform:lowercase"><a href="https://libreim.github.io">libreim</a></span>
 author: <span style="text-transform:lowercase"><a href="https://twitter.com/mx_psi">@mx_psi</a></span>
 lang: es
 theme: white
