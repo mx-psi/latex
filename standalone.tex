@@ -1,0 +1,18 @@
+% pdflatex --shell-escape standalone.tex
+% Necesitas tener el comando convert
+
+% Genera una imagen independiente
+\documentclass[convert={density=300,outext=.png}]{standalone}
+
+% Paquetes para gráficos
+\usepackage{tikz, pgfplots}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[samples=20]
+    \addplot3[surf, domain=-2:2] {x^2-y^2};
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,304 @@
+<div style="font-size:1.6em">
+<p><a href="https://mx-psi.github.io/latex"><code>mx-psi.github.io/latex</code></a></p>
+</div>
+<aside class="notes">
+<p><strong>Instalación</strong></p>
+<ul>
+<li>Para instalarlo: https://libreim.github.io/blog/2015/03/14/latex</li>
+<li>Los paquetes de algunas distribuciones (en especial Ubuntu) pueden estar desactualizados y tener algunos problemas al intentar instalar paquetes. Recomendación → Instalar desde tug.org para tener la última versión. Instrucciones en: https://www.tug.org/texlive/quickinstall.html</li>
+<li>En caso de que no podáis instalarlo podéis usar OverLeaf</li>
+<li>Para editarlo podéis usar un editor de texto normal y corriente. Si queréis algo más específico podéis descargar TexStudio</li>
+</ul>
+<p><strong>Intro</strong></p>
+<ul>
+<li>Cómo se pronuncia LaTeX</li>
+<li>Es un sistema de composición de textos. Se parece más a HTML (el lenguaje que describe la estructura de las páginas webs) que a Word: escribimos en un lenguaje especial que nos permite separar apariencia y estructura. Es un lenguaje Turing-completo si nos ponemos a ello.</li>
+<li>Es especialmente útil para escribir fórmulas matemáticas y para hacer documentos de gran longitud</li>
+<li>Describimos el contenido y la estructura y LaTeX se encarga de posicionar cada sección, figura...</li>
+</ul>
+<p><strong>Qué vamos a ver</strong></p>
+<ul>
+<li>LaTeX es inmenso y es imposible explicarlo todo en 3 horas. Me voy a centrar en lo necesario para empezar a escribir un documento y escribir matemáticas correctamente.</li>
+<li>Puede haber múltiples formas de hacer algo, voy a intentar explicar la más directa.</li>
+<li>Yo no uso LaTeX directamente casi nunca excepto para matemáticas. Utilizo otros lenguajes de marcado más sencillos y menos tediosos de escribir que describimos después</li>
+<li>Vamos a ver cómo hacer pdfs con pdflatex. Pueden conseguirse otros tipos de documento (el más notable .dvi). Para compilar: <code>pdflatex minimal.tex</code>.</li>
+<li>A veces hay que compilar varias veces (biblatex o índice)</li>
+<li>Puede usarse xelatex por ejemplo.</li>
+</ul>
+</aside>
+<h1 id="lo-básico">Lo básico</h1>
+<p>Primero vemos <a href="minimal.tex">un documento mínimo</a>. Como vemos:</p>
+<ul>
+<li>Se escribe en documentos <code>.tex</code>.</li>
+<li>Escribimos el contenido y añadimos comandos cuando sea necesario.</li>
+<li>Los comentarios se escriben con <code>%</code></li>
+</ul>
+<hr />
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\documentclass[11pt]{article}
+
+\usepackage[spanish,es-noquoting]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath,amsfonts}
+
+\title{Ejemplo}
+
+\begin{document}
+\maketitle
+Este es un documento de ejemplo
+\end{document}</code></pre></div>
+<hr />
+<p>Los comandos se escriben empezando por una barra invertida (<code>Alt Gr</code> + <code>º</code>):</p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\comando[opcional]{arg1}{arg2}</code></pre></div>
+<hr />
+<ul>
+<li><code>\maketitle</code> produce el título</li>
+<li><code>\title{Ejemplo}</code> indica cuál es el título</li>
+<li><code>\sqrt[3]{2}</code> produce <span class="math inline">$\sqrt[3]{2}$</span> (modo matemáticas)</li>
+</ul>
+<aside class="notes">
+<ul>
+<li><code>author</code> para autores</li>
+<li><code>date</code> para la fecha</li>
+</ul>
+</aside>
+<hr />
+<ul>
+<li>El documento se escribe después de <code>\begin{document}</code></li>
+<li><strong>Línea en blanco</strong> después de cada párrafo!</li>
+</ul>
+<aside class="notes">
+Esto nos permite escribir párrafos sin que las líneas sean kilométricas
+</aside>
+<h1 id="setup">Setup</h1>
+<ul>
+<li><code>documentclass</code> especifica el tipo de documento</li>
+<li><code>usepackage</code> permite añadir paquetes</li>
+<li><code>babel</code>, <code>inputenc</code>, <code>fontenc</code> para castellano</li>
+<li><code>amsXXXX</code> para matemáticas</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Otras clases: beamer, book, report, KOMA... Hay clases específicas para algunos journals por ejemplo</li>
+<li>Algunas opciones nos permiten modificar aspectos de la apariencia</li>
+<li>Instalación de paquetes en el post</li>
+<li>Todas las matemáticas que veamos asumen esos paquetes. Casi cualquier cosa (Anki, MathJax,...) admiten esos paquetes</li>
+<li>No hace falta recordarlos! Hay plantillas o podemos usar pandoc</li>
+</ul>
+</aside>
+<h1 id="secciones">Secciones</h1>
+<p>Podemos dividir el documento en secciones con <code>section</code>, <code>subsection</code>, <code>subsubsection</code>...</p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\section{Sección con número}
+\subsection{Subsección sin número}</code></pre></div>
+<h1 id="modos-para-matemáticas">Modos para matemáticas</h1>
+<dl>
+<dt>Inline</dt>
+<dd>entre <code>$</code>: <span class="math inline">$\sum_{i=1}^n \frac{i}{4}$</span>
+</dd>
+<dt>Display</dt>
+<dd>entre <code>$$</code> o <code>\[</code>,<code>\]</code>: <br /><span class="math display">$$\sum_{i=1}^n \frac{i}{4}$$</span><br />
+</dd>
+</dl>
+<aside class="notes">
+Existen gran cantidad de símbolos. Explicamos aquí sólo los más importantes http://www.unizar.es/analisis_matematico/cuartero/short-math-guide.pdf Recomendación: ir aprendiendo cuando convenga - En LaTeX es preferible <code>\[\]</code> a <code>$$</code> por el espaciado - En otros sitios: sólo <code>$$</code> - Los símbolos matemáticos <strong>sólo</strong> funcionan dentro de dólares - Hay otros entornos que veremos a continuación - Podemos forzar el modo display dentro de inline con <code>\displaystyle</code>
+</aside>
+<h1 id="símbolos-comunes">Símbolos comunes</h1>
+<p>Algunos símbolos se escriben directamente:</p>
+<pre><code>0123456789 . ,
++ - = ! / ( ) [ ] &lt; &gt; | &#39; :</code></pre>
+<p>Para otros símbolos necesitamos <code>\comandos</code>.</p>
+<h1 id="letras-griegas">Letras griegas</h1>
+<p>Escribimos letras griegas por su nombre en inglés:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>\gamma</code></td>
+<td align="left"><span class="math inline"><em>γ</em></span></td>
+</tr>
+<tr class="even">
+<td align="left"><code>\Gamma</code></td>
+<td align="left"><span class="math inline"><em>Γ</em></span></td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+Versión mayúscula con la primera letra en mayúscula
+</aside>
+<hr />
+<p><span class="math inline"><em>π</em></span> y <span class="math inline"><em>σ</em></span> tienen versiones para sumatorio y productorio:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>\Pi</code></td>
+<td align="center"><br /><span class="math display"><em>Π</em></span><br /></td>
+<td align="left"><code>\prod</code></td>
+<td align="center"><br /><span class="math display">∏</span><br /></td>
+</tr>
+<tr class="even">
+<td align="left"><code>\Sigma</code></td>
+<td align="center"><br /><span class="math display"><em>Σ</em></span><br /></td>
+<td align="left"><code>\sum</code></td>
+<td align="center"><br /><span class="math display">∑</span><br /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Algunas letras tienen varias versiones:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>\epsilon</code></td>
+<td align="left"><br /><span class="math display"><em>ϵ</em></span><br /></td>
+</tr>
+<tr class="even">
+<td align="left"><code>\varepsilon</code></td>
+<td align="left"><br /><span class="math display"><em>ε</em></span><br /></td>
+</tr>
+</tbody>
+</table>
+<h1 id="estilos-de-fuentes">Estilos de fuentes</h1>
+<p>Algunos símbolos (<span class="math inline">ℂ</span>) usan una fuente especial:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>\mathbb{R}</code></td>
+<td align="left"><span class="math inline">ℝ</span></td>
+</tr>
+<tr class="even">
+<td align="left"><code>\mathcal{C}[0,1]</code></td>
+<td align="left"><span class="math inline">𝒞[0, 1]</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\mathfrak{h}</code></td>
+<td align="left"><span class="math inline">𝔥</span></td>
+</tr>
+<tr class="even">
+<td align="left"><code>\mathsf{Set}</code></td>
+<td align="left"><span class="math inline">Set</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="otros-símbolos">Otros símbolos</h1>
+<div class="figure">
+<img src="detexify.png" alt="detexify.kirelabs.org" />
+<p class="caption">detexify.kirelabs.org</p>
+</div>
+<p>El resto de símbolos no siguen unas reglas concretas. Puedes usar <a href="http://detexify.kirelabs.org/classify.html">Detexify</a>.</p>
+<aside class="notes">
+<ul>
+<li>También hay una lista de símbolos en el post de libreim</li>
+<li>vs </li>
+<li>y son distintos de &lt; y &gt;</li>
+</ul>
+</aside>
+<h1 id="posicionado">Posicionado</h1>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Subíndices</strong></td>
+<td align="center"><code>a_n</code></td>
+<td align="center"><span class="math inline"><em>a</em><sub><em>n</em></sub></span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Superíndices</strong></td>
+<td align="center"><code>e^{i\pi}</code></td>
+<td align="center"><span class="math inline"><em>e</em><sup><em>i</em><em>π</em></sup></span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Fracciones</strong></td>
+<td align="center"><code>\frac{1}{2}</code></td>
+<td align="center"><span class="math inline">$\frac12$</span></td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<ul>
+<li>Hay que usar llaves cuando hay más de una cosa</li>
+<li>Pueden usarse overset y underset</li>
+</ul>
+</aside>
+<h1 id="paréntesis">Paréntesis</h1>
+<p><code>\left</code> y <code>\right</code> ajustan el tamaño de los paréntesis:</p>
+<p><span class="math inline"><em>f</em>(∫<sub>0</sub><sup>1</sup><em>e</em><sup><em>x</em></sup> <em>d</em><em>x</em>) </span> vs. <span class="math inline"> <em>f</em>(∫<sub>0</sub><sup>1</sup><em>e</em><sup><em>x</em></sup> <em>d</em><em>x</em>)</span></p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">f(\int_0^1 e^x \; dx)
+
+f\left(\int_0^1 e^x \; dx\right)</code></pre></div>
+<aside class="notes">
+<ul>
+<li>LaTeX ignora los espacios por defecto. Hay comandos que añaden espacio:</li>
+<li><code>\; \quad \qquad</code></li>
+<li>Cuando hay <code>\left</code> siempre debe de haber <code>\right</code>. Si no hay símbolo se pone <code>.</code></li>
+<li>Sirve para [], (), {}, ||...</li>
+</ul>
+</aside>
+<h1 id="operadores">Operadores</h1>
+<p>¿Cómo distinguimos variables y nombres? <span class="math inline"><em>l</em><em>i</em><em>m</em> = <em>l</em> ⋅ <em>i</em> ⋅ <em>m</em></span></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>lim</code></td>
+<td align="left"><span class="math inline"><em>l</em><em>i</em><em>m</em><sub><em>x</em> → 0</sub></span></td>
+<td align="center">:(</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\lim</code></td>
+<td align="left"><span class="math inline">lim<sub><em>x</em> → 0</sub></span></td>
+<td align="center">:D</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<p>En general usamos <code>operatorname</code>.</p>
+<aside class="notes">
+<ul>
+<li>Babel añade acento a lím y eso</li>
+</ul>
+</aside>
+</div>
+<h1 id="formato-de-texto">Formato de texto</h1>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>\text</code><strong><code>it</code></strong><code>{cursiva}</code></td>
+<td align="left"><em>cursiva</em></td>
+</tr>
+<tr class="even">
+<td align="left"><code>\text</code><strong><code>bf</code></strong><code>{negrita}</code></td>
+<td align="left"><strong>negrita</strong></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\text</code><strong><code>tt</code></strong><code>{código}</code></td>
+<td align="left"><code>código</code></td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<ul>
+<li>Equivalentes para matemáticas: mathit, mathbf, mathtt</li>
+<li>text dentro de mates</li>
+</ul>
+</aside>
+<h1 id="entornos">Entornos</h1>
+<ul>
+<li>enumerate, itemize, description, quotation</li>
+<li>table</li>
+</ul>
+<h1 id="entornos-para-matemáticas">Entornos para matemáticas</h1>
+<ul>
+<li>align</li>
+<li>equation, proof, theorem (los dos últimos con amsthm)</li>
+</ul>
+<h1 id="comandos">Comandos</h1>
+<ul>
+<li>newcommand y renewcommand</li>
+</ul>
+<h1 id="otras-cosas">Otras cosas</h1>
+<ul>
+<li>tikz</li>
+<li>Código. listings</li>
+<li>Figuras</li>
+<li>Tabla. booktabs</li>
+<li>Bibliografía. biblatex</li>
+<li>geometry o KOMA</li>
+</ul>
