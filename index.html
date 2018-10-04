@@ -3,49 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="@mx_psi">
+  <meta name="author" content="@mx_psi(@mstdn.io)">
   <title>\LaTeX</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
   <!-- Printing and PDF exports -->
@@ -59,16 +90,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title"><span class="math inline">\(\LaTeX\)</span></h1>
-  <h2 class="author"><span style="text-transform:lowercase"><a href="https://twitter.com/mx_psi"><span class="citation" data-cites="mx_psi">@mx_psi</span></a></span></h2>
-  <h3><span style="text-transform:lowercase"><a href="https://libreim.github.io">libreim</a></span></h3>
+  <p class="author"><span style="text-transform:lowercase"><a href="https://twitter.com/mx_psi"><span class="citation" data-cites="mx_psi"><span class="citation" data-cites="mx_psi">@mx_psi</span></span></a>(<a href="http://mstdn.io/@mx_psi"><span class="citation" data-cites="mstdn.io"><span class="citation" data-cites="mstdn.io">@mstdn.io</span></span></a>)</span></p>
+  <p class="date"><span style="font-size:2.2rem;color:darkgray;">v1.1 ¡Ahora con menos azúcar!</span></p>
 </section>
 
 <section class="slide level2">
@@ -82,11 +112,12 @@ Necesita los archivos de reveal.js
 </div>
 </section>
 <section id="instalación" class="slide level2">
-<h1>Instalación</h1>
+<h2>Instalación</h2>
 <div style="font-size:1.6em">
 <p><a href="https://libreim.github.io/blog/2015/03/14/latex">Post de libreim</a></p>
 </div>
 <p>En Ubuntu y derivados es recomendable <strong>no</strong> usar los paquetes de <code>apt</code>.</p>
+<p>Instalar desde tug.org</p>
 <aside class="notes">
 <ul>
 <li>Los paquetes de algunas distribuciones (en especial Ubuntu) pueden estar desactualizados y tener algunos problemas al intentar instalar paquetes. Recomendación → Instalar desde tug.org para tener la última versión. Instrucciones en: https://www.tug.org/texlive/quickinstall.html</li>
@@ -95,7 +126,7 @@ Necesita los archivos de reveal.js
 <li>Cómo se pronuncia LaTeX</li>
 <li>Es un sistema de composición de textos. Se parece más a HTML (el lenguaje que describe la estructura de las páginas webs) que a Word: escribimos en un lenguaje especial que nos permite separar apariencia y estructura. Es un lenguaje Turing-completo si nos ponemos a ello.</li>
 <li>Es especialmente útil para escribir fórmulas matemáticas y para hacer documentos de gran longitud</li>
-<li>Describimos el contenido y la estructura y LaTeX se encarga de posicionar cada sección, figura...</li>
+<li>Describimos el contenido y la estructura y LaTeX se encarga de posicionar cada sección, figura…</li>
 </ul>
 <p><strong>Qué vamos a ver</strong></p>
 <ul>
@@ -108,30 +139,28 @@ Necesita los archivos de reveal.js
 </ul>
 </aside>
 </section>
-<section><section id="lo-básico" class="titleslide slide level1" data-background-color="#ededed"><h1>Lo básico</h1></section><section id="documento-mínimo" class="slide level2">
-<h1>Documento mínimo</h1>
+<section><section id="lo-básico" class="title-slide slide level1" data-background-color="#ededed"><h1>Lo básico</h1></section><section id="documento-mínimo" class="slide level2">
+<h2>Documento mínimo</h2>
 <div class="twocol">
 <div>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\documentclass[11pt]{article}
-\usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath,amsfonts}
-
-\title{Ejemplo}
-\author{Pablo}
-
-\begin{document}
-\maketitle
-Este es un 
-documento de ejemplo
-\end{document}</code></pre></div>
-<p><span style="font-size:0.5em"><a href="minimal.tex" class="uri">minimal.tex</a></span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="bu">\documentclass</span>[11pt]{<span class="ex">scrartcl</span>}</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="bu">\usepackage</span>[spanish]{<span class="ex">babel</span>}</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="bu">\usepackage</span>[utf8]{<span class="ex">inputenc</span>}</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="bu">\usepackage</span>{<span class="ex">amsmath,amsfonts</span>}</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="fu">\title</span>{Ejemplo}</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="fu">\author</span>{Pablo}</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="kw">\begin</span>{<span class="ex">document</span>}</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="fu">\maketitle</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">Este es un </a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">documento de ejemplo</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="kw">\end</span>{<span class="ex">document</span>}</a></code></pre></div>
+<p><span style="font-size:0.5em"><a href="minimal.tex">minimal.tex</a></span></p>
 </div>
 <div>
-<figure>
-<img src="minimal.png" />
-</figure>
+<p><img data-src="minimal.png" /></p>
 </div>
 </div>
 </section><section class="slide level2">
@@ -145,7 +174,7 @@ documento de ejemplo
 </section><section class="slide level2">
 
 <p>Los comandos se escriben empezando por una barra invertida (<code>Alt Gr</code> + <code>º</code>):</p>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\comando[opcional]{arg1}{arg2}</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="fu">\comando</span>[opcional]{arg1}{arg2}</a></code></pre></div>
 </section><section class="slide level2">
 
 <ul>
@@ -169,7 +198,7 @@ documento de ejemplo
 Esto nos permite escribir párrafos sin que las líneas sean kilométricas
 </aside>
 </section><section id="setup" class="slide level2">
-<h1>Setup</h1>
+<h2>Setup</h2>
 <ul>
 <li><code>documentclass</code> especifica el tipo de documento</li>
 <li><code>usepackage</code> permite añadir paquetes</li>
@@ -178,21 +207,21 @@ Esto nos permite escribir párrafos sin que las líneas sean kilométricas
 </ul>
 <aside class="notes">
 <ul>
-<li>Otras clases: beamer, book, report, KOMA... Hay clases específicas para algunos journals por ejemplo</li>
+<li>Otras clases: beamer, book, report, KOMA… Hay clases específicas para algunos journals por ejemplo</li>
 <li>Algunas opciones nos permiten modificar aspectos de la apariencia</li>
 <li>Instalación de paquetes en el post</li>
-<li>Todas las matemáticas que veamos asumen esos paquetes. Casi cualquier cosa (Anki, MathJax,...) admiten esos paquetes</li>
+<li>Todas las matemáticas que veamos asumen esos paquetes. Casi cualquier cosa (Anki, MathJax,…) admiten esos paquetes</li>
 <li>No hace falta recordarlos! Hay plantillas o podemos usar pandoc</li>
 </ul>
 </aside>
 </section><section id="secciones" class="slide level2">
-<h1>Secciones</h1>
-<p>Podemos dividir el documento en secciones con <code>section</code>, <code>subsection</code>, <code>subsubsection</code>...</p>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\section{Sección con número}
-\subsection{Subsección sin número}</code></pre></div>
+<h2>Secciones</h2>
+<p>Podemos dividir el documento en secciones con <code>section</code>, <code>subsection</code>, <code>subsubsection</code>…</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">\section</span>{Sección con número}</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="fu">\subsection</span>*{Subsección sin número}</a></code></pre></div>
 </section></section>
-<section><section id="matemáticas" class="titleslide slide level1" data-background-color="#ededed"><h1>Matemáticas</h1></section><section id="modos" class="slide level2">
-<h1>Modos</h1>
+<section><section id="matemáticas" class="title-slide slide level1" data-background-color="#ededed"><h1>Matemáticas</h1></section><section id="modos" class="slide level2">
+<h2>Modos</h2>
 <dl>
 <dt>Inline</dt>
 <dd>entre <code>$</code>: <span class="math inline">\(\sum_{i=1}^n \frac{i}{4}\)</span>
@@ -205,13 +234,13 @@ Esto nos permite escribir párrafos sin que las líneas sean kilométricas
 Existen gran cantidad de símbolos. Explicamos aquí sólo los más importantes http://www.unizar.es/analisis_matematico/cuartero/short-math-guide.pdf Recomendación: ir aprendiendo cuando convenga - En LaTeX es preferible <code>\[\]</code> a <code>$$</code> por el espaciado - En otros sitios: sólo <code>$$</code> - Los símbolos matemáticos <strong>sólo</strong> funcionan dentro de dólares - Hay otros entornos que veremos a continuación - Podemos forzar el modo display dentro de inline con <code>\displaystyle</code>
 </aside>
 </section><section id="símbolos-comunes" class="slide level2">
-<h1>Símbolos comunes</h1>
+<h2>Símbolos comunes</h2>
 <p>Algunos símbolos se escriben directamente:</p>
 <pre><code>0123456789 . ,
 + - = ! / ( ) [ ] &lt; &gt; | &#39; :</code></pre>
 <p>Para otros símbolos necesitamos <code>\comandos</code>.</p>
 </section><section id="letras-griegas" class="slide level2">
-<h1>Letras griegas</h1>
+<h2>Letras griegas</h2>
 <p>Escribimos letras griegas por su nombre en inglés:</p>
 <table>
 <tbody>
@@ -263,7 +292,7 @@ Versión mayúscula con la primera letra en mayúscula
 </tbody>
 </table>
 </section><section id="estilos-de-fuentes" class="slide level2">
-<h1>Estilos de fuentes</h1>
+<h2>Estilos de fuentes</h2>
 <p>Algunos símbolos (<span class="math inline">\(\mathbb{C}\)</span>) usan una fuente especial:</p>
 <table>
 <tbody>
@@ -280,15 +309,15 @@ Versión mayúscula con la primera letra en mayúscula
 <td style="text-align: left;"><span class="math inline">\(\mathfrak{h}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>\mathsf{Set}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathsf{Set}\)</span></td>
+<td style="text-align: left;"><code>\mathsf{CRing}</code></td>
+<td style="text-align: left;"><span class="math inline">\(\mathsf{Cring}\)</span></td>
 </tr>
 </tbody>
 </table>
 </section><section id="otros-símbolos" class="slide level2">
-<h1>Otros símbolos</h1>
+<h2>Otros símbolos</h2>
 <figure>
-<img src="detexify.png" alt="detexify.kirelabs.org" /><figcaption>detexify.kirelabs.org</figcaption>
+<img data-src="detexify.png" alt="detexify.kirelabs.org" /><figcaption>detexify.kirelabs.org</figcaption>
 </figure>
 <p>El resto de símbolos no siguen unas reglas concretas. Puedes usar <a href="http://detexify.kirelabs.org/classify.html">Detexify</a>.</p>
 <aside class="notes">
@@ -299,7 +328,7 @@ Versión mayúscula con la primera letra en mayúscula
 </ul>
 </aside>
 </section><section id="posicionado" class="slide level2">
-<h1>Posicionado</h1>
+<h2>Posicionado</h2>
 <table>
 <tbody>
 <tr class="odd">
@@ -327,37 +356,36 @@ Versión mayúscula con la primera letra en mayúscula
 </ul>
 </aside>
 </section><section id="paréntesis" class="slide level2">
-<h1>Paréntesis</h1>
+<h2>Paréntesis</h2>
 <p><code>\left</code> y <code>\right</code> ajustan el tamaño de los paréntesis:</p>
 <p><span class="math inline">\(\displaystyle f(\int_0^1 e^x \; dx)\quad\)</span> vs. <span class="math inline">\(\displaystyle \quad f\left(\int_0^1 e^x \; dx\right)\)</span></p>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">$f(\int_0^1 e^x \; dx)$
-
-vs.
-
-$f\left(\int_0^1 e^x \; dx\right)$</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="ss">$f(</span><span class="sc">\int</span><span class="ss">_0^1 e^x </span><span class="sc">\;</span><span class="ss"> dx)$</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">vs.</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="ss">$f</span><span class="sc">\left</span><span class="ss">(</span><span class="sc">\int</span><span class="ss">_0^1 e^x </span><span class="sc">\;</span><span class="ss"> dx</span><span class="sc">\right</span><span class="ss">)$</span></a></code></pre></div>
 <aside class="notes">
 <ul>
 <li>LaTeX ignora los espacios por defecto. Hay comandos que añaden espacio:</li>
 <li><code>\; \quad \qquad</code></li>
 <li>Cuando hay <code>\left</code> siempre debe de haber <code>\right</code>. Si no hay símbolo se pone <code>.</code></li>
-<li>Sirve para [], (), {}, ||...</li>
-<li>Para escribirlo bien del todo deberíamos utilizar mathrm pero no quería complicar más la cosa</li>
+<li>Sirve para [], (), {}, ||…</li>
 </ul>
 </aside>
 </section><section id="operadores" class="slide level2">
-<h1>Operadores</h1>
+<h2>Operadores</h2>
 <p>¿Cómo distinguimos variables y nombres? <span class="math inline">\(lim = l \cdot i \cdot m\)</span></p>
 <table>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><code>lim_{x \to 0}</code></td>
 <td style="text-align: left;"><span class="math inline">\(\displaystyle lim_{x \to 0}\)</span></td>
-<td style="text-align: left;">:(</td>
+<td></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>\lim_{x \to 0}</code></td>
 <td style="text-align: left;"><span class="math inline">\(\displaystyle \lim_{x \to 0}\)</span></td>
-<td style="text-align: left;">:D</td>
+<td>:D</td>
 </tr>
 </tbody>
 </table>
@@ -370,8 +398,8 @@ $f\left(\int_0^1 e^x \; dx\right)$</code></pre></div>
 </aside>
 </div>
 </section></section>
-<section><section id="formato" class="titleslide slide level1" data-background-color="#ededed"><h1>Formato</h1></section><section id="texto" class="slide level2">
-<h1>Texto</h1>
+<section><section id="formato" class="title-slide slide level1" data-background-color="#ededed"><h1>Formato</h1></section><section id="texto" class="slide level2">
+<h2>Texto</h2>
 <table>
 <tbody>
 <tr class="odd">
@@ -395,7 +423,7 @@ $f\left(\int_0^1 e^x \; dx\right)$</code></pre></div>
 </ul>
 </aside>
 </section><section id="entornos" class="slide level2">
-<h1>Entornos</h1>
+<h2>Entornos</h2>
 <p>Se escriben entre <code>\begin{env}</code> y <code>\end{env}</code></p>
 <aside class="notes">
 <ul>
@@ -408,106 +436,101 @@ $f\left(\int_0^1 e^x \; dx\right)$</code></pre></div>
 <h3 id="listas">Listas</h3>
 <div class="twocol">
 <div>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{itemize}
-\item Azúcar
-\item Especias
-\item Cosas bonitas
-\end{itemize}</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">\begin</span>{<span class="ex">itemize</span>}</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="fu">\item</span> He was a moth</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="fu">\item</span> She was a lamp</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="fu">\item</span> Can I make it </a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">      any more obvious?</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="kw">\end</span>{<span class="ex">itemize</span>}</a></code></pre></div>
 </div>
 <div>
 <ul>
-<li>Azúcar</li>
-<li>Especias</li>
-<li>Cosas bonitas</li>
+<li>He was a moth</li>
+<li>She was a lamp</li>
+<li>Can I make it any more obvious?</li>
 </ul>
 </div>
 </div>
 </section><section id="enumeraciones" class="slide level2">
-<h1>Enumeraciones</h1>
+<h2>Enumeraciones</h2>
 <div class="twocol">
 <div>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{enumerate}
-\item acer
-\item la
-\item cencia
-\end{enumerate}</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="fu">\item</span> Muchos hijos</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="fu">\item</span> un mono</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="fu">\item</span> un castillo</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="kw">\end</span>{<span class="ex">enumerate</span>}</a></code></pre></div>
 </div>
 <div>
 <ol>
-<li>acer<sup style="font-size:0.3em">1</sup></li>
-<li>la</li>
-<li>cencia<sup style="font-size:0.3em">1</sup></li>
+<li>Muchos hijos</li>
+<li>un mono</li>
+<li>un castillo</li>
 </ol>
 </div>
 </div>
 <div style="font-size:0.3em; padding-top:5em">
-<p>1: Es un <a href="https://twitter.com/cientefico">meme de Twitter</a> y ahi que respetar la ortografía original.</p>
+<p>Véase <a href="https://letterboxd.com/film/lots-of-kids-a-monkey-and-a-castle/">el documental</a></p>
 </div>
 </section><section id="descripciones" class="slide level2">
-<h1>Descripciones</h1>
+<h2>Descripciones</h2>
 <div class="twocol">
 <div>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{description}
-\item[Dog park] Not for dogs
-\item[Mountains] Non-existent
-\item[Angels] Forbidden 
-\end{description}</code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">\begin</span>{<span class="ex">description</span>}</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="fu">\item</span>[Mitochondria]</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">     powerhouse of the cell</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="fu">\item</span>[Trebuchet]</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">     superior siege weapon</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="kw">\end</span>{<span class="ex">description</span>}</a></code></pre></div>
 </div>
 <div>
 <dl>
-<dt>Dog park</dt>
-<dd>Not for dogs
+<dt>Mitochondria</dt>
+<dd>powerhouse of the cell
 </dd>
-<dt>Mountains</dt>
-<dd>Non-existent
-</dd>
-<dt>Angels</dt>
-<dd>Forbidden
+<dt>Trebuchet</dt>
+<dd>superior siege weapon
 </dd>
 </dl>
 </div>
 </div>
-<div style="font-size:0.3em; padding-top:3em">
-<p>Este no es un meme de Twitter pero puedes ver una explicación <a href="http://www.welcometonightvale.com/">aquí</a>.</p>
-</div>
 </section><section id="citas" class="slide level2">
-<h1>Citas</h1>
+<h2>Citas</h2>
 <div class="twocol">
 <div>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{quote}
-For sale: 
-dyson sphere,
-never worn
-\end{quote}</code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">\begin</span>{<span class="ex">quote</span>}</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">Kun miaj uloj </a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">en la restoracio Luna Rosa, </a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">manĝante bonegan picon </a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="kw">\end</span>{<span class="ex">quote</span>}</a></code></pre></div>
 </div>
 <div>
 <blockquote>
-<p>For sale: dyson sphere, never worn</p>
+<p>Kun miaj uloj en la restoracio Luna Rosa, manĝante bonegan picon</p>
 </blockquote>
 </div>
 </div>
-<div style="font-size:0.3em; padding-top:3em">
-<p>Y este es un <a href="https://twitter.com/GapOfGods/status/540986395011977216">tweet</a> basado en <a href="https://en.wikipedia.org/wiki/For_sale:_baby_shoes,_never_worn">este microcuento</a>.</p>
-</div>
 </section><section id="en-matemáticas" class="slide level2">
-<h1>En matemáticas</h1>
+<h2>En matemáticas</h2>
 <div class="twocol">
 <div>
-<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">\begin{equation*}
-f(x) = 
-\begin{cases}
-0 &amp; \text{si } x \geq 0 \\
-1 &amp; \text{si } x &lt; 0
-\end{cases}
-\end{equation*}</code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode latex"><code class="sourceCode latex"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">\begin</span>{<span class="ex">equation*</span>}</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="ss">f(x) = </span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">\begin</span>{<span class="ex">cases</span>}</a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="ss">0 &amp; </span><span class="sc">\text</span>{si }<span class="ss"> </span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="ss">  x </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{Q} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="ss">1 &amp; </span><span class="sc">\text</span>{si }<span class="ss"> </span></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="ss">  x </span><span class="sc">\notin</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{Q}</span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="kw">\end</span>{<span class="ex">cases</span>}</a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="kw">\end</span>{<span class="ex">equation*</span>}</a></code></pre></div>
 </div>
 <div>
-<p><span class="math display">\[f(x) = \begin{cases} 0 &amp; \text{si } x \geq 0 \\ 1 &amp; \text{si } x &lt; 0 \end{cases}\]</span></p>
+<p><span class="math display">\[f(x) = \begin{cases} 0 &amp; \text{si } x \in \mathbb{Q} \\ 1 &amp; \text{si } x \notin \mathbb{Q} \end{cases}\]</span></p>
 </div>
 </div>
 <aside class="notes">
 <ul>
-<li>equation para ecuaciones numeradas (se referencian con label)</li>
+<li>equation para ecuaciones numeradas (se referencian con label y ref) (equation* sin referencia)</li>
 <li>align para cosas alineadas</li>
 <li>case para casos</li>
 <li>matrix para matrices</li>
@@ -515,8 +538,8 @@ f(x) =
 </ul>
 </aside>
 </section></section>
-<section><section id="lo-menos-básico" class="titleslide slide level1" data-background-color="#ededed"><h1>Lo menos básico</h1></section><section id="comandos" class="slide level2">
-<h1>Comandos</h1>
+<section><section id="lo-menos-básico" class="title-slide slide level1" data-background-color="#ededed"><h1>Lo menos básico</h1></section><section id="comandos" class="slide level2">
+<h2>Comandos</h2>
 <p>Podemos crear nuevos comandos:</p>
 <div class="twocol">
 <div>
@@ -534,26 +557,24 @@ f(x) =
 <ul>
 <li>newcommand y renewcommand</li>
 <li>Cuidau con renewcommand que nos podemos estar cargando algo interno</li>
-<li>También podemos crear nuevos entornos, condicionales, bucles...</li>
+<li>También podemos crear nuevos entornos, condicionales, bucles…</li>
 <li>LaTeX es Turing-completo</li>
 </ul>
 </aside>
 </section><section id="tikz" class="slide level2">
-<h1>tikz</h1>
+<h2>tikz</h2>
 <div class="twocol">
 <div>
 <pre><code>\begin{tikzpicture}
 \begin{axis}[samples=20]
 \addplot3[surf,domain=-2:2]
-{x^2-y^2};
+{x^3-y^2};
 \end{axis}
 \end{tikzpicture}</code></pre>
-<p><span style="font-size:0.5em"><a href="standalone.tex" class="uri">standalone.tex</a></span></p>
+<p><span style="font-size:0.5em"><a href="standalone.tex">standalone.tex</a></span></p>
 </div>
 <div>
-<figure>
-<img src="tikz.png" />
-</figure>
+<p><img data-src="tikz.png" /></p>
 </div>
 </div>
 <aside class="notes">
@@ -564,7 +585,7 @@ f(x) =
 </ul>
 </aside>
 </section><section id="imágenes" class="slide level2">
-<h1>Imágenes</h1>
+<h2>Imágenes</h2>
 <p>Usamos <code>graphicx</code>:</p>
 <div class="twocol">
 <div>
@@ -572,16 +593,14 @@ f(x) =
 
 % ...
 
-\includegraphics{gato}</code></pre>
+\includegraphics{perro}</code></pre>
 </div>
 <div>
-<figure>
-<img src="gato.jpg" />
-</figure>
+<p><img data-src="perro.jpg" /></p>
 </div>
 </div>
 </section><section id="pandoc" class="slide level2">
-<h1>pandoc</h1>
+<h2>pandoc</h2>
 <p>Formato más sencillo:</p>
 <div class="twocol">
 <div>
@@ -592,7 +611,7 @@ author: Pablo
 
 Este es un
 documento de ejemplo.</code></pre>
-<p><span style="font-size:0.5em">minimal.md</span></p>
+<p><span style="font-size:0.5em"><a href="minimal.md">minimal.md</a></span></p>
 </div>
 <div>
 <p>Compilamos con:</p>
@@ -609,16 +628,21 @@ documento de ejemplo.</code></pre>
 </ul>
 </aside>
 </section><section id="leer-más" class="slide level2">
-<h1>Leer más</h1>
+<h2>Leer más</h2>
 <p>LaTeX (y pandoc!) permiten muchas más cosas:</p>
 <ul>
 <li><a href="https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings">Código</a></li>
 <li><a href="https://en.wikibooks.org/wiki/LaTeX/Tables">Tablas</a></li>
 <li><a href="https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management">Bibliografía</a></li>
-<li>...</li>
+</ul>
+</section><section class="slide level2">
+
+<p>Algunos recursos:</p>
+<ul>
+<li><a href="https://gitlab.com/josealberto4444/phd-thesis">Plantillas de JoseAlberto444</a></li>
 </ul>
 </section></section>
-<section><section id="fin" class="titleslide slide level1"><h1>Fin!</h1></section></section>
+<section id="fin" class="title-slide slide level1"><h1>Fin!</h1></section>
     </div>
   </div>
 
@@ -630,11 +654,30 @@ documento de ejemplo.</code></pre>
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true },
           { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });

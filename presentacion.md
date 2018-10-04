@@ -1,6 +1,7 @@
 ---
 title: $\LaTeX$
-author: <span style="text-transform:lowercase"><a href="https://twitter.com/mx_psi">@mx_psi</a></span>
+author: <span style="text-transform:lowercase"><a href="https://twitter.com/mx_psi"><span class="citation" data-cites="mx_psi">@mx_psi</span></a>(<a href="http://mstdn.io/@mx_psi"><span class="citation" data-cites="mstdn.io">@mstdn.io</span></a>)</span>
+date: <span style="font-size:2.2rem;color:darkgray;">v1.1 ¡Ahora con menos azúcar!</span>
 lang: es
 theme: white
 ---
@@ -21,6 +22,8 @@ Necesita los archivos de reveal.js
 </div>
 
 En Ubuntu y derivados es recomendable **no** usar los paquetes de `apt`.
+
+Instalar desde tug.org
 
 <aside class="notes">
 - Los paquetes de algunas distribuciones (en especial Ubuntu) pueden estar desactualizados y tener algunos problemas al intentar instalar paquetes. Recomendación → Instalar desde tug.org para tener la última versión. Instrucciones en: https://www.tug.org/texlive/quickinstall.html
@@ -48,7 +51,7 @@ En Ubuntu y derivados es recomendable **no** usar los paquetes de `apt`.
 <div class="twocol">
 <div>
 ```latex
-\documentclass[11pt]{article}
+\documentclass[11pt]{scrartcl}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -127,7 +130,7 @@ Podemos dividir el documento en secciones con `section`, `subsection`, `subsubse
 
 ```latex
 \section{Sección con número}
-\subsection{Subsección sin número}
+\subsection*{Subsección sin número}
 ```
 
 # Matemáticas {data-background-color="#ededed"}
@@ -201,7 +204,7 @@ Algunos símbolos ($\mathbb{C}$) usan una fuente especial:
 `\mathbb{R}`           $\mathbb{R}$
 `\mathcal{C}[0,1]`     $\mathcal{C}[0,1]$
 `\mathfrak{h}`         $\mathfrak{h}$
-`\mathsf{Set}`         $\mathsf{Set}$
+`\mathsf{CRing}`         $\mathsf{Cring}$
 ---------------------  -------------------
 
 ## Otros símbolos
@@ -257,7 +260,7 @@ $f\left(\int_0^1 e^x \; dx\right)$
 $lim = l \cdot i \cdot m$
 
 ---------------------  ------------------------------------  ------
-`lim_{x \to 0}`        $\displaystyle lim_{x \to 0}$         :(
+`lim_{x \to 0}`        $\displaystyle lim_{x \to 0}$         
 `\lim_{x \to 0}`       $\displaystyle \lim_{x \to 0}$        :D
 ---------------------  ------------------------------------  ------
 
@@ -301,17 +304,18 @@ Se escriben entre `\begin{env}` y `\end{env}`
 <div>
 ```latex
 \begin{itemize}
-\item Azúcar
-\item Especias
-\item Cosas bonitas
+\item He was a moth
+\item She was a lamp
+\item Can I make it 
+      any more obvious?
 \end{itemize}
 ```
 </div>
 
 <div>
-- Azúcar
-- Especias
-- Cosas bonitas
+- He was a moth
+- She was a lamp
+- Can I make it any more obvious?
 </div>
 </div>
 
@@ -321,22 +325,22 @@ Se escriben entre `\begin{env}` y `\end{env}`
 <div>
 ```latex
 \begin{enumerate}
-\item acer
-\item la
-\item cencia
+\item Muchos hijos
+\item un mono
+\item un castillo
 \end{enumerate}
 ```
 </div>
 
 <div>
-#. acer<sup style="font-size:0.3em">1</sup>
-#. la
-#. cencia<sup style="font-size:0.3em">1</sup>
+#. Muchos hijos
+#. un mono
+#. un castillo
 </div>
 </div>
 
 <div style="font-size:0.3em; padding-top:5em">
-1: Es un [meme de Twitter](https://twitter.com/cientefico) y ahi que respetar la ortografía original.
+Véase [el documental](https://letterboxd.com/film/lots-of-kids-a-monkey-and-a-castle/)
 </div>
 
 
@@ -346,27 +350,21 @@ Se escriben entre `\begin{env}` y `\end{env}`
 <div>
 ```latex
 \begin{description}
-\item[Dog park] Not for dogs
-\item[Mountains] Non-existent
-\item[Angels] Forbidden 
+\item[Mitochondria]
+     powerhouse of the cell
+\item[Trebuchet]
+     superior siege weapon
 \end{description}
 ```
 </div>
 
 <div>
-Dog park
-: Not for dogs
+Mitochondria
+: powerhouse of the cell
 
-Mountains
-: Non-existent
-
-Angels
-: Forbidden
+Trebuchet
+: superior siege weapon
 </div>
-</div>
-
-<div style="font-size:0.3em; padding-top:3em">
-Este no es un meme de Twitter pero puedes ver una explicación [aquí](http://www.welcometonightvale.com/).
 </div>
 
 ## Citas
@@ -375,21 +373,18 @@ Este no es un meme de Twitter pero puedes ver una explicación [aquí](http://ww
 <div>
 ```latex
 \begin{quote}
-For sale: 
-dyson sphere,
-never worn
+Kun miaj uloj 
+en la restoracio Luna Rosa, 
+manĝante bonegan picon 
 \end{quote}
 ```
 </div>
 
 <div>
-> For sale: dyson sphere, never worn
+> Kun miaj uloj en la restoracio Luna Rosa, manĝante bonegan picon 
 </div>
 </div>
 
-<div style="font-size:0.3em; padding-top:3em">
-Y este es un [tweet](https://twitter.com/GapOfGods/status/540986395011977216) basado en [este microcuento](https://en.wikipedia.org/wiki/For_sale:_baby_shoes,_never_worn).
-</div>
 
 ## En matemáticas
 
@@ -399,19 +394,21 @@ Y este es un [tweet](https://twitter.com/GapOfGods/status/540986395011977216) ba
 \begin{equation*}
 f(x) = 
 \begin{cases}
-0 & \text{si } x \geq 0 \\
-1 & \text{si } x < 0
+0 & \text{si } 
+  x \in \mathbb{Q} \\
+1 & \text{si } 
+  x \notin \mathbb{Q}
 \end{cases}
 \end{equation*}
 ```
 </div>
 <div>
-$$f(x) = \begin{cases} 0 & \text{si } x \geq 0 \\ 1 & \text{si } x < 0 \end{cases}$$
+$$f(x) = \begin{cases} 0 & \text{si } x \in \mathbb{Q} \\ 1 & \text{si } x \notin \mathbb{Q} \end{cases}$$
 </div>
 </div>
 
 <aside class="notes">
-- equation para ecuaciones numeradas (se referencian con label)
+- equation para ecuaciones numeradas (se referencian con label y ref) (equation* sin referencia)
 - align para cosas alineadas
 - case para casos
 - matrix para matrices
@@ -454,7 +451,7 @@ $$\frac{df}{dx}$$
 \begin{tikzpicture}
 \begin{axis}[samples=20]
 \addplot3[surf,domain=-2:2]
-{x^2-y^2};
+{x^3-y^2};
 \end{axis}
 \end{tikzpicture}
 ```
@@ -482,11 +479,11 @@ Usamos `graphicx`:
 
 % ...
 
-\includegraphics{gato}
+\includegraphics{perro}
 ```
 </div>
 <div>
-![](gato.jpg)
+![](perro.jpg)
 </div>
 </div>
 
@@ -530,7 +527,13 @@ LaTeX (y pandoc!) permiten muchas más cosas:
 - [Código](https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings)
 - [Tablas](https://en.wikibooks.org/wiki/LaTeX/Tables)
 - [Bibliografía](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management)
-- ...
+
+***
+
+Algunos recursos:
+
+
+- [Plantillas de JoseAlberto444](https://gitlab.com/josealberto4444/phd-thesis)
 
 # Fin!
 
