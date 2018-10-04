@@ -1,7 +1,6 @@
 ---
 title: $\LaTeX$
 author: <span style="text-transform:lowercase"><a href="https://twitter.com/mx_psi"><span class="citation" data-cites="mx_psi">@mx_psi</span></a>(<a href="http://mstdn.io/@mx_psi"><span class="citation" data-cites="mstdn.io">@mstdn.io</span></a>)</span>
-date: <span style="font-size:2.2rem;color:darkgray;">v1.1 ¡Ahora con menos azúcar!</span>
 lang: es
 theme: white
 ---
