@@ -203,7 +203,7 @@ Algunos símbolos ($\mathbb{C}$) usan una fuente especial:
 `\mathbb{R}`           $\mathbb{R}$
 `\mathcal{C}[0,1]`     $\mathcal{C}[0,1]$
 `\mathfrak{h}`         $\mathfrak{h}$
-`\mathsf{CRing}`         $\mathsf{Cring}$
+`\mathsf{CRing}`         $\mathsf{CRing}$
 ---------------------  -------------------
 
 ## Otros símbolos
