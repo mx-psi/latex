@@ -259,7 +259,7 @@ $f\left(\int_0^1 e^x \; dx\right)$
 $lim = l \cdot i \cdot m$
 
 ---------------------  ------------------------------------  ------
-`lim_{x \to 0}`        $\displaystyle lim_{x \to 0}$         
+`lim_{x \to 0}`        $\displaystyle lim_{x \to 0}$         :(
 `\lim_{x \to 0}`       $\displaystyle \lim_{x \to 0}$        :D
 ---------------------  ------------------------------------  ------
 
@@ -450,7 +450,7 @@ $$\frac{df}{dx}$$
 \begin{tikzpicture}
 \begin{axis}[samples=20]
 \addplot3[surf,domain=-2:2]
-{x^3-y^2};
+{sin(deg(x))*cos(deg(y))};
 \end{axis}
 \end{tikzpicture}
 ```
@@ -533,6 +533,8 @@ Algunos recursos:
 
 
 - [Plantillas de JoseAlberto444](https://gitlab.com/josealberto4444/phd-thesis)
+- [Plantillas de jmml97](https://github.com/jmml97/LaTeX-Templates)
+- [Plantillas de mroman42](https://github.com/mroman42/plantillas)
 
 # Fin!
 
