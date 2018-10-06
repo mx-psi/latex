@@ -146,7 +146,7 @@ Display
 Existen gran cantidad de símbolos. Explicamos aquí sólo los más importantes
 http://www.unizar.es/analisis_matematico/cuartero/short-math-guide.pdf
 Recomendación: ir aprendiendo cuando convenga
-- En LaTeX es preferible `\[\]` a `$$` por el espaciado
+- En LaTeX es preferible `\\[\\]` a `$$` por el espaciado
 - En otros sitios: sólo `$$`
 - Los símbolos matemáticos **sólo** funcionan dentro de dólares
 - Hay otros entornos que veremos a continuación
@@ -215,8 +215,8 @@ Puedes usar [Detexify](http://detexify.kirelabs.org/classify.html).
 
 <aside class="notes">
 - También hay una lista de símbolos en el post de libreim
-- \varnothing vs \emptyset
-- \langle y \rangle son distintos de < y >
+- $\varnothing$ vs $\emptyset$
+- $\langle$ y $\rangle$ son distintos de < y >
 </aside>
 
 ## Posicionado
@@ -248,7 +248,7 @@ $f\left(\int_0^1 e^x \; dx\right)$
 ```
 <aside class="notes">
 - LaTeX ignora los espacios por defecto. Hay comandos que añaden espacio:
-- `\; \quad \qquad`
+- `\; \quad \qquad`. Espacios negativos?
 - Cuando hay `\left` siempre debe de haber `\right`.  Si no hay símbolo se pone `.`
 - Sirve para [], (), {}, ||...
 </aside>

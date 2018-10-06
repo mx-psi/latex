@@ -231,7 +231,7 @@ Esto nos permite escribir párrafos sin que las líneas sean kilométricas
 </dd>
 </dl>
 <aside class="notes">
-Existen gran cantidad de símbolos. Explicamos aquí sólo los más importantes http://www.unizar.es/analisis_matematico/cuartero/short-math-guide.pdf Recomendación: ir aprendiendo cuando convenga - En LaTeX es preferible <code>\[\]</code> a <code>$$</code> por el espaciado - En otros sitios: sólo <code>$$</code> - Los símbolos matemáticos <strong>sólo</strong> funcionan dentro de dólares - Hay otros entornos que veremos a continuación - Podemos forzar el modo display dentro de inline con <code>\displaystyle</code>
+Existen gran cantidad de símbolos. Explicamos aquí sólo los más importantes http://www.unizar.es/analisis_matematico/cuartero/short-math-guide.pdf Recomendación: ir aprendiendo cuando convenga - En LaTeX es preferible <code>\\[\\]</code> a <code>$$</code> por el espaciado - En otros sitios: sólo <code>$$</code> - Los símbolos matemáticos <strong>sólo</strong> funcionan dentro de dólares - Hay otros entornos que veremos a continuación - Podemos forzar el modo display dentro de inline con <code>\displaystyle</code>
 </aside>
 </section><section id="símbolos-comunes" class="slide level2">
 <h2>Símbolos comunes</h2>
@@ -323,8 +323,8 @@ Versión mayúscula con la primera letra en mayúscula
 <aside class="notes">
 <ul>
 <li>También hay una lista de símbolos en el post de libreim</li>
-<li>vs </li>
-<li>y son distintos de &lt; y &gt;</li>
+<li><span class="math inline">\(\varnothing\)</span> vs <span class="math inline">\(\emptyset\)</span></li>
+<li><span class="math inline">\(\langle\)</span> y <span class="math inline">\(\rangle\)</span> son distintos de &lt; y &gt;</li>
 </ul>
 </aside>
 </section><section id="posicionado" class="slide level2">
@@ -367,7 +367,7 @@ Versión mayúscula con la primera letra en mayúscula
 <aside class="notes">
 <ul>
 <li>LaTeX ignora los espacios por defecto. Hay comandos que añaden espacio:</li>
-<li><code>\; \quad \qquad</code></li>
+<li><code>\; \quad \qquad</code>. Espacios negativos?</li>
 <li>Cuando hay <code>\left</code> siempre debe de haber <code>\right</code>. Si no hay símbolo se pone <code>.</code></li>
 <li>Sirve para [], (), {}, ||…</li>
 </ul>
