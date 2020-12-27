@@ -532,7 +532,7 @@ LaTeX (y pandoc!) permiten muchas más cosas:
 Algunos recursos:
 
 
-- [Plantillas de JoseAlberto4444](https://gitlab.com/josealberto4444/latex-templates)
+- [Plantillas de josealberto4444](https://git.sr.ht/~josealberto4444/latex-templates)
 - [Plantillas de jmml97](https://github.com/jmml97/LaTeX-Templates)
 - [Plantillas de mroman42](https://github.com/mroman42/plantillas)
 
